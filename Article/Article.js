@@ -28,9 +28,8 @@ NodeList and create a new instance of Article by passing in each article as a pa
 
 */
 
-let articles = document.querySelectorAll('.article');
+let articles = document.querySelectorAll('.article'); // Pull in all article elements from the DOM
 
-articles.forEach( (article) =>{
-  new Article(article);
-//console.log(articles);
+articles.forEach( (article) =>{ // Looping over the list of articles
+  new Article(article); // Create an intance of each article
 })
