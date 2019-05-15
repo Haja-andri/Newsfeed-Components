@@ -5,11 +5,10 @@ class Article {
   constructor(domElement) {
     // assign this.domElement to the passed in domElement
     this.domElement = domElement;
-    
     // create a reference to the ".expandButton" class. 
-    this.expandButton = document.querySelector('.expandButton');
+    this.expandButton = this.domElement.querySelector('.expandButton');
     // Using your expandButton reference, update the text on your expandButton to say "expand"
-    this.expandButton.textContent = 'expand'
+    this.expandButton.textContent = 'Expand'
     // Set a click handler on the expandButton reference, calling the expandArticle method.
     this.expandButton.addEventListener('click', this.expandArticle.bind(this))
   }
@@ -30,7 +29,8 @@ NodeList and create a new instance of Article by passing in each article as a pa
 */
 
 let articles = document.querySelectorAll('.article');
-//console.log(articles);
+
 articles.forEach( (article) =>{
   new Article(article);
+//console.log(articles);
 })
